@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://textures/Green/alienGreen_front.png" type="Texture" id=2]
+[ext_resource path="res://area2d_overlap/Gem.gd" type="Script" id=1]
+[ext_resource path="res://textures/gemBlue.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 64 )
+extents = Vector2( 32, 24 )
 
-[node name="Player" type="Area2D"]
+[node name="Gem" type="Area2D" groups=[ "pickable_item" ]]
 
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -18,25 +18,17 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-monitoring = false
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-speed = 400
+__meta__ = { "_edit_group_":true }
 
 [node name="gfx" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, -64 )
 texture = ExtResource( 2 )
-region_rect = Rect2( 60, 174, 44, 38 )
 
 [node name="coll" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
-
-[connection signal="area_enter" from="." to="." method="_on_Player_area_enter"]
 
 

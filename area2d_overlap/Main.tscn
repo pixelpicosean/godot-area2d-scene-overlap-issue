@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://area2d_overlap/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://area2d_overlap/Gem.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 330.746, 199.651 )
+
+[node name="Gem" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 36.3759, 35.8129 )
+
+[node name="Gem 2" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 37.2562, 322.435 )
+
+[node name="Gem 3" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 599.286, 38.4537 )
+
+[node name="Gem 4" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 601.047, 320.674 )
+
+
